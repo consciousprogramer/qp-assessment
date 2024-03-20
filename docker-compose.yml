@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  backend:
+    build: .
+    container_name: qp-backend
+    ports:
+      - 8080:8080
+    depends_on:
+      - database
+    env_file:
+      - .docker.env
+
+  database:
+    image: postgres
+    container_name: qp-postgres
+    # we don't need port 5432 exposed to the host
+    # ports:
+    #   - 5432:5432 
+    expose:
+      - 5432
+    volumes:
+      - postgres-volume:/var/lib/postgresql/data
+    env_file:
+      - .docker.env
+volumes:
+  postgres-volume:
+  # qp-assessment-volume:
+    

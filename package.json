@@ -1,0 +1,38 @@
+{
+  "name": "qp-assessment",
+  "version": "1.0.0",
+  "description": "rohit's (Application ID : 29446442) assessment project for QuestionPro.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon app.ts",
+    "build": "npx tsc",
+    "prod": "node ./dist/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/consciousprogramer/qp-assessment.git"
+  },
+  "keywords": [
+    "assessment"
+  ],
+  "author": "rohit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/consciousprogramer/qp-assessment/issues"
+  },
+  "homepage": "https://github.com/consciousprogramer/qp-assessment#readme",
+  "dependencies": {
+    "@prisma/client": "5.11.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.25",
+    "nodemon": "^3.1.0",
+    "prisma": "^5.10.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  }
+}
